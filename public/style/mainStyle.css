@@ -1,0 +1,210 @@
+/* backgournd color #EADBCD
+navbar color #E9C5A6
+Subtitle color #ECE3DB */
+
+/* font oswald */
+
+body {
+    background-color:#EADBCD;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+h5 {
+    font-weight: 200;
+    margin: 0;
+}
+
+.name-container {
+    height: 200px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.name-container h1 {
+    font-size: 8em;
+}
+
+.navbar {
+    background-color: #E9C5A6;
+    
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link a:hover {
+    color: blue;
+}
+
+.navbar form input {
+    background-color: #E9C5A6;
+    border: none;
+    color: black;
+}
+
+.navbar form input:focus {
+    outline: none;
+    background-color: #E9C5A6;
+}
+
+.main-container {
+    display: flex;
+}
+
+.posts-container {
+    border-right: 1px solid black;
+    padding: 0 3em;
+}
+
+.most-recent-post-container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.new-post-image {
+    height: 250px;
+    width: 250px;
+    background-image: url('/uploads/macy.JPG');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.new-post-content {
+    background-color: rgba(236, 227, 219);
+    max-width: 420px;
+    padding: 30px 50px 15px 80px;
+    position: absolute;
+    left: 250px;
+    top: 20px;
+}
+
+.latest-post {
+    background-color: white;
+    max-width: 100px;
+}
+
+.new-post-text {
+    font-size: 12px;
+    line-height: 1.6;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+.new-post-content a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.new-post-content a:hover {
+    color: grey;
+}
+
+.read-more {
+    font-style: italic;
+}
+
+.post-container {
+    background-color: white;
+    width: 220px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.post-container:hover {
+    transform: translate3d(0, -5px, 0);
+    box-shadow: 0 2rem 5rem 0 rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.post-image {
+    height: 200px;
+    width: 170px;
+    margin: 10px auto;
+    background-image: url('/uploads/macy.JPG');
+    background-position: center;
+    background-size: cover;
+}
+
+.post-category {
+    padding: 8px;
+    min-width: 100px;
+    background-color: rgba(236, 227, 219, 0.9);
+    font-size: 12px;
+    position: absolute;
+    left: 35px;
+    top: 200px;
+}
+
+.posts-container p {
+    margin: 0;
+}
+
+.pink {
+    background-color: #E9C5A6;
+}
+
+.bio {
+    background-color: white;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.bio-image {
+    margin: 0 auto;
+    width: 90%;
+    height: 350px;
+    background-color: #E9C5A6;
+}
+
+.name {
+    background-color: rgba(236, 227, 219, 0.9);
+    position: absolute;
+    left: 50px;
+    top: 340px;
+}
+
+.bio-discription {
+    line-height: 1.6;
+    max-height: 110px;
+    overflow: hidden;
+}
+
+.shopping-locations {
+    background-color: white;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.shopping-title {
+    margin: 0 auto;
+    background-color: rgba(236, 227, 219, 0.9);
+}
+
+.shopping-list ul li {
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.shopping-list a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.shopping-list a:hover {
+    color: grey;
+}

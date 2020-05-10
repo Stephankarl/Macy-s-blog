@@ -1,0 +1,27 @@
+{
+  "name": "macys-blog",
+  "version": "1.0.0",
+  "description": "Macy's Lifestyle Blog",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "Hong Kong",
+    "Macy",
+    "Macy Karl",
+    "Lifestyle",
+    "Travel",
+    "Blog"
+  ],
+  "author": "Stephan Karl",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11",
+    "multer": "^1.4.2"
+  }
+}

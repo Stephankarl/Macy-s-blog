@@ -1,0 +1,17 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <div class="row">
+        <% posts.forEach((post) => { %>
+            <div class="post-container mt-4 mr-3">
+                <div class="post-image mt-3" style="background-image: url(/<%= post.image %>);"></div>
+                <div class="post-category text-center"><%= post.category %></div>
+                <div class="post-title text-center">
+                    <h5 class="p-3"><%= post.title %></h5>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<%- include('../partials/footer') -%>
