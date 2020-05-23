@@ -1,0 +1,53 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <!-- THE MAIN CONTAINER  -->
+    <div class="main-container mt-4">
+        <!-- THE POSTS CONTAINER  -->
+        <div class="posts-container col-md-9 col-sm-12">
+            <h1 class="m-5"><%= post.title %></h1>
+            <div class="individualPostImage mb-4" style="background-image: url(/<%= post.image %>);"></div>
+            <h5 class="mb-4"><%= post.category %></h5>
+            <p class="mb-4"><%= post.content %></p>
+            <p class="mb-4"><%= post.date %></p>
+        </div>
+
+        <!-- SIDE-BAR CONTAINER  -->
+        <div class="sidebar-container col d-none d-md-block">
+            <!-- MACY'S BIO CONTAINER  -->
+            <div class="bio p-3">
+                <div class="bio-image"></div>
+                <div class="col-6 name p-2 text-center">Macy Karl</div>
+                <div class="bio-discription mt-3 p-2 text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
+            </div>
+            <!-- SHOPPING CONTAINER  -->
+            <div class="shopping-locations my-3">
+                <div class="shopping-title col-8 text-center p-2 mb-3"><h5>WHERE I SHOP</h5></div>
+                <div class="shopping-list">
+                        <ul class="text-center p-0">
+                            <a href=""><li>Target</li></a>
+                            <a href=""><li>Macys</li></a>
+                            <a href=""><li>Louis Vuitton</li></a>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="extras-container p-3 mb-3">
+                <div class="extras-title p-2 text-center">Amazon Favorites</div>
+                <div class="extras-content p-2">
+
+                </div>
+            </div>
+
+            <div class="extras-container p-3 mb-3">
+                <div class="extras-title p-2 text-center">Destinations</div>
+                <div class="extras-content p-2">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') -%>

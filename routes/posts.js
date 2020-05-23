@@ -22,10 +22,10 @@ router.get('/new', (req, res) => {
 });
 
 //Getting a new post
-router.post('/', upload.single('post-image'), (req, res) => {
+router.post('/', upload.single('postImage'), (req, res) => {
     const newPost = {
         title: req.body.title,
-        category: req.body.category,
+        category: req.body.category.toLowerCase(),
         content: req.body.content,
         image: req.file.path,
         date: Date.now()
@@ -44,35 +44,19 @@ router.get('/', (req, res) => {
     });
 });
 
-//LifeStyle Route
-router.get('/lifestyle', (req, res) => {
-    Posts.find({ category: 'Lifestyle' }).sort({ _id:-1 }).exec((err, posts) => {
+//Displaying Category Route
+router.get('/:category', (req, res) => {
+    Posts.find({ category: req.params.category }).sort({ _id:-1 }).exec((err, posts) => {
         if (err) throw err;
         res.render('posts/showPosts', { posts: posts });
     });
 });
 
-//Asia Expat Route
-router.get('/asia_expat', (req, res) => {
-    Posts.find({ category: 'Asia Expat' }).sort({ _id:-1 }).exec((err, posts) => {
+//Individual Post route
+router.get('/:category/:id', (req, res) => {
+    Posts.findById(req.params.id, (err, post) => {
         if (err) throw err;
-        res.render('posts/showPosts', { posts: posts });
-    });
-});
-
-//Travel Route
-router.get('/travel', (req, res) => {
-    Posts.find({ category: 'Travel' }).sort({ _id:-1 }).exec((err, posts) => {
-        if (err) throw err;
-        res.render('posts/showPosts', { posts: posts });
-    });
-});
-
-//Style Route
-router.get('/style', (req, res) => {
-    Posts.find({ category: 'Style' }).sort({ _id:-1 }).exec((err, posts) => {
-        if (err) throw err;
-        res.render('posts/showPosts', { posts: posts });
+        res.render('posts/individualPost', { post: post });
     });
 });
 

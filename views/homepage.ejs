@@ -1,8 +1,10 @@
 <%- include('./partials/header') -%>
 <div class="container">
+    <!-- THE MAIN CONTAINER  -->
     <div class="main-container mt-4">
+        <!-- THE POSTS CONTAINER  -->
         <div class="posts-container col-md-9 col-sm-12">
-
+            <!-- MOST RECENT POST CONTAINER  -->
             <div class="most-recent-post-container">
                 <div class="new-post-image m-5" style="background-image: url(<%= posts[0].image %>);"></div>
                 <div class="new-post-content">
@@ -12,7 +14,7 @@
                     <div class="read-more mt-2 text-right"><a href="">Continue Reading</a></div>
                 </div>
             </div>
-
+            <!-- LATEST 9 POSTS  -->
             <div class="recent-posts mt-4">
                 <div class="row justify-content-center">
                     <div class="col-8 text-center pink">
@@ -22,24 +24,93 @@
 
                 <div class="row justify-content-around mb-4">
                     <% for(let i = 1; i < posts.length; i++) { %>
-                        <div class="post-container mt-4">
-                            <div class="post-image mt-3" style="background-image: url(<%= posts[i].image %>);"></div>
-                            <div class="post-category text-center"><%= posts[i].category %></div>
-                            <div class="post-discription">
-                                <p class="p-3"><%= posts[i].content %></p>
+                        <a href="/posts/<%= posts[i].category %>/<%= posts[i]._id %>">
+                            <div class="post-container mt-4 pt-2">
+                                <div class="post-image mt-3" style="background-image: url(<%= posts[i].image %>);"></div>
+                                <div class="post-category text-center"><%= posts[i].category.toUpperCase() %></div>
+                                <div class="post-discription">
+                                    <p class="p-3"><%= posts[i].title %></p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     <% }; %>
                 </div>
             </div>
+
+            <!-- FOLLOWING ALONG CONTAINER -->
+            <div class="following-along-container">
+
+                <div class="row justify-content-center mb-4">
+                    <div class="col-8 text-center pink">
+                        <h5 class="p-2">Following Along</h5>
+                    </div>
+                </div>
+
+                <div class="row justify-content-around mb-4">
+                    <a href="">
+                        <div class="follow-container pink d-flex align-items-center">
+                            <h5 class="mx-auto">Subscribe</h5>
+                        </div>
+                    </a>
+                    <a href="https://www.liketoknow.it/macykarl">
+                        <div class="follow-container pink d-flex align-items-center">
+                            <h5 class="mx-auto">Like to Know It</h5>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/postcardstominnesota/">
+                        <div class="follow-container pink d-flex align-items-center">
+                            <h5 class="mx-auto">Instagram</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row justify-content-center mb-4">
+                    <div class="col-8 text-center pink">
+                        <h5 class="p-2">Want More?</h5>
+                    </div>
+                </div>
+
+                <div class="row justify-content-around mb-4">
+                    <a href="/posts/lifestyle">
+                        <div class="follow-container pink d-flex align-items-center">
+                            <h5 class="mx-auto">LifeStyle</h5>
+                        </div>
+                    </a>
+                    <a href="/posts/style">
+                        <div class="follow-container pink d-flex align-items-center">
+                            <h5 class="mx-auto">Style</h5>
+                        </div>
+                    </a>
+                    <a href="/posts/travel">
+                        <div class="follow-container pink d-flex align-items-center">
+                            <h5 class="mx-auto">Travel</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="most-recent-post-container mb-4">
+                    <div class="new-post-image m-5" style="background-image: url(<%= posts[0].image %>);"></div>
+                    <div class="new-post-content">
+                        <div class="latest-post p-2 mb-3 text-center">LATEST POST</div>
+                        <div class="new-post-title mb-4"><h3><%= posts[0].title %></h3></div>
+                        <div class="new-post-text mb-3"><%= posts[0].content %></div>
+                        <div class="read-more mt-2 text-right"><a href="">Continue Reading</a></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+        <!-- SIDE-BAR CONTAINER  -->
         <div class="sidebar-container col d-none d-md-block">
-            <div class="bio">
+            <!-- MACY'S BIO CONTAINER  -->
+            <div class="bio p-3">
                 <div class="bio-image"></div>
                 <div class="col-6 name p-2 text-center">Macy Karl</div>
                 <div class="bio-discription mt-3 p-2 text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
             </div>
-            <div class="shopping-locations mt-3">
+            <!-- SHOPPING CONTAINER  -->
+            <div class="shopping-locations my-3">
                 <div class="shopping-title col-8 text-center p-2 mb-3"><h5>WHERE I SHOP</h5></div>
                 <div class="shopping-list">
                         <ul class="text-center p-0">
@@ -49,6 +120,21 @@
                         </ul>
                 </div>
             </div>
+
+            <div class="extras-container p-3 mb-3">
+                <div class="extras-title p-2 text-center">Amazon Favorites</div>
+                <div class="extras-content p-2">
+
+                </div>
+            </div>
+
+            <div class="extras-container p-3 mb-3">
+                <div class="extras-title p-2 text-center">Destinations</div>
+                <div class="extras-content p-2">
+
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

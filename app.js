@@ -17,7 +17,6 @@ app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 app.use(express.json());
 
-
 //Connecting files for Routes
 const postsRoutes = require('./routes/posts');
 
@@ -30,6 +29,5 @@ app.get('/', (req, res) => {
       res.render('homepage', { posts: posts });
     });
 });
-
 
 app.listen(process.env.PORT, () => console.log('Server has Started.'));
