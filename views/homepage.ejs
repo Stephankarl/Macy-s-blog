@@ -9,7 +9,7 @@
                 <div class="most-recent-post-container d-flex">
                     <div class="new-post-image my-5 mx-auto ml-md-5" style="background-image: url(<%= posts[0].image %>);"></div>
                     <div class="new-post-content d-none d-md-block">
-                        <div class="latest-post p-2 mb-3 text-center">LATEST POST</div>
+                        <div class="latest-post p-2 mb-3 text-center"><h5>LATEST POST</h5></div>
                         <div class="new-post-title mb-4"><h3><%= posts[0].title %></h3></div>
                         <div class="new-post-text mb-3"><%= posts[0].content %></div>
                         <div class="read-more mt-2 text-right"><a href="/posts/<%= posts[0].category %>/<%= posts[0]._id %>">Continue Reading</a></div>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="new-post-content-sm d-md-none">
                     <div class="row justify-content-end">
-                        <div class="latest-post col-4 pink p-2 mb-3 mr-5 text-center">LATEST POST</div>
+                        <div class="latest-post col-4 pink p-2 mb-3 mr-5 text-center"><h5>LATEST POST</h5></div>
                     </div>
                     <div class="new-post-title mb-4"><h3 class="text-center p-3"><%= posts[0].title %></h3></div>
                     <div class="new-post-text-sm p-3 mb-3"><%= posts[0].content %></div>
@@ -100,25 +100,36 @@
                 </div>
 
                 <!-- ABOUT MACY INFO IN MAIN CONTAINER  -->
-                <div class="row justify-content-center">
-                    <div class="most-recent-post-container d-flex mt-2 mb-4">
-                        <div class="new-post-image m-5" style="background-image: url(../../../public/uploads/fixed/meetMacy.jpg); background-position: top;"></div>
-                        <div class="new-post-content">
-                            <div class="latest-post p-2 mb-3 text-center">About Me...</div>
-                            <div class="new-post-title mb-4"><h3>Hi, I’m Macy Karl! Want to read more about me?</h3></div>
+                <div class="row justify-content-center mb-4">
+                    <div class="most-recent-post-container d-flex">
+                        <div class="new-post-image my-5 mx-auto ml-md-5" style="background-image: url(../../../public/uploads/fixed/meetMacy.jpg); background-position: top;"></div>
+                        <div class="new-post-content d-none d-md-block">
+                            <div class="latest-post p-2 mb-3 text-center"><h5>ABOUT ME...</h5></div>
+                            <div class="new-post-title mb-4"><h3>Hi, I’m Macy Karl! Want to know More?</h3></div>
                             <div class="new-post-text mb-3">
                                 <p>I am a busy, spontaneous and high-spirited enneagram type 7 person who piggy backs off of type 8 challenger. I am obsessed with sharing my tips and tricks from around the world in all areas of life!</p>
-                                <p>I’m a small town Minnesota gal who uprooted her life to Hong Kong after meeting her South African fiancé one week prior. Currently living in the heart of one of the biggest cities in the world and I wouldn’t have changed a thing along the way. You can find me snuggled up in our 600sqft apartment nose deep behind my computer screen sharing my adventures and lifestyle hacks. I’m glad you’re here.</p>
+                            <p>I’m a small town Minnesota gal who uprooted her life to Hong Kong after meeting her South African fiancé one week prior. Currently living in the heart of one of the biggest cities in the world and I wouldn’t have changed a thing along the way. You can find me snuggled up in our 600sqft apartment nose deep behind my computer screen sharing my adventures and lifestyle hacks. I’m glad you’re here.</p>
                             </div>
                             <div class="read-more mt-2 text-right"><a href="/about">Continue Reading</a></div>
                         </div>
+                    </div>
+                    <div class="new-post-content-sm d-md-none">
+                        <div class="row justify-content-end">
+                            <div class="latest-post col-4 pink p-2 mb-3 mr-5 text-center"><h5>ABOUT ME...</h5></div>
+                        </div>
+                        <div class="new-post-title mb-4"><h3 class="text-center p-3">Hi, I’m Macy Karl! Want to know More?</h3></div>
+                        <div class="new-post-text-sm p-3 mb-3">
+                            <p>I am a busy, spontaneous and high-spirited enneagram type 7 person who piggy backs off of type 8 challenger. I am obsessed with sharing my tips and tricks from around the world in all areas of life!</p>
+                            <p>I’m a small town Minnesota gal who uprooted her life to Hong Kong after meeting her South African fiancé one week prior. Currently living in the heart of one of the biggest cities in the world and I wouldn’t have changed a thing along the way. You can find me snuggled up in our 600sqft apartment nose deep behind my computer screen sharing my adventures and lifestyle hacks. I’m glad you’re here.</p>
+                        </div>
+                        <div class="read-more my-2 mr-4 text-right"><a href="/about">Continue Reading</a></div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- SIDE-BAR CONTAINER  -->
-        <div class="sidebar-container col d-none d-lg-block">
+        <div class="sidebar-container d-flex col d-none d-lg-block">
             <!-- MACY'S BIO CONTAINER  -->
             <div class="bio p-3">
                 <div class="bio-image"></div>
