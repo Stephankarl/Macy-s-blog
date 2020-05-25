@@ -33,7 +33,6 @@ a:hover
 }
 
 .name-container {
-    height: 200px;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -77,8 +76,8 @@ a:hover
 
 .most-recent-post-container {
     background-color: white;
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    max-width: 730px;
     position: relative;
 }
 

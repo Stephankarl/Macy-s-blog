@@ -1,19 +1,22 @@
 <%- include('./partials/header') -%>
-<div class="container">
+<div class="container-fluid">
     <!-- THE MAIN CONTAINER  -->
     <div class="main-container mt-4">
         <!-- THE POSTS CONTAINER  -->
-        <div class="posts-container col-md-9 col-sm-12">
+        <div class="posts-container col col-lg-9">
             <!-- MOST RECENT POST CONTAINER  -->
-            <div class="most-recent-post-container">
-                <div class="new-post-image m-5" style="background-image: url(<%= posts[0].image %>);"></div>
-                <div class="new-post-content">
-                    <div class="latest-post p-2 mb-3 text-center">LATEST POST</div>
-                    <div class="new-post-title mb-4"><h3><%= posts[0].title %></h3></div>
-                    <div class="new-post-text mb-3"><%= posts[0].content %></div>
-                    <div class="read-more mt-2 text-right"><a href="/posts/<%= posts[0].category %>/<%= posts[0]._id %>">Continue Reading</a></div>
+            <div class="row justify-content-center">
+                <div class="most-recent-post-container d-flex">
+                    <div class="new-post-image m-5" style="background-image: url(<%= posts[0].image %>);"></div>
+                    <div class="new-post-content d-none d-md-block">
+                        <div class="latest-post p-2 mb-3 text-center">LATEST POST</div>
+                        <div class="new-post-title mb-4"><h3><%= posts[0].title %></h3></div>
+                        <div class="new-post-text mb-3"><%= posts[0].content %></div>
+                        <div class="read-more mt-2 text-right"><a href="/posts/<%= posts[0].category %>/<%= posts[0]._id %>">Continue Reading</a></div>
+                    </div>
                 </div>
             </div>
+            
             <!-- LATEST 9 POSTS  -->
             <div class="recent-posts">
                 <div class="row justify-content-center my-4">
@@ -87,25 +90,27 @@
                         </div>
                     </a>
                 </div>
+
                 <!-- ABOUT MACY INFO IN MAIN CONTAINER  -->
-                <div class="most-recent-post-container mt-2 mb-4">
-                    <div class="new-post-image m-5" style="background-image: url(../../../public/uploads/fixed/meetMacy.jpg); background-position: top;"></div>
-                    <div class="new-post-content">
-                        <div class="latest-post p-2 mb-3 text-center">About Me...</div>
-                        <div class="new-post-title mb-4"><h3>Hi, I’m Macy Karl! Want to read more about me?</h3></div>
-                        <div class="new-post-text mb-3">
-                            <p>I am a busy, spontaneous and high-spirited enneagram type 7 person who piggy backs off of type 8 challenger. I am obsessed with sharing my tips and tricks from around the world in all areas of life!</p>
-                            <p>I’m a small town Minnesota gal who uprooted her life to Hong Kong after meeting her South African fiancé one week prior. Currently living in the heart of one of the biggest cities in the world and I wouldn’t have changed a thing along the way. You can find me snuggled up in our 600sqft apartment nose deep behind my computer screen sharing my adventures and lifestyle hacks. I’m glad you’re here.</p>
+                <div class="row justify-content-center">
+                    <div class="most-recent-post-container d-flex mt-2 mb-4">
+                        <div class="new-post-image m-5" style="background-image: url(../../../public/uploads/fixed/meetMacy.jpg); background-position: top;"></div>
+                        <div class="new-post-content">
+                            <div class="latest-post p-2 mb-3 text-center">About Me...</div>
+                            <div class="new-post-title mb-4"><h3>Hi, I’m Macy Karl! Want to read more about me?</h3></div>
+                            <div class="new-post-text mb-3">
+                                <p>I am a busy, spontaneous and high-spirited enneagram type 7 person who piggy backs off of type 8 challenger. I am obsessed with sharing my tips and tricks from around the world in all areas of life!</p>
+                                <p>I’m a small town Minnesota gal who uprooted her life to Hong Kong after meeting her South African fiancé one week prior. Currently living in the heart of one of the biggest cities in the world and I wouldn’t have changed a thing along the way. You can find me snuggled up in our 600sqft apartment nose deep behind my computer screen sharing my adventures and lifestyle hacks. I’m glad you’re here.</p>
+                            </div>
+                            <div class="read-more mt-2 text-right"><a href="/about">Continue Reading</a></div>
                         </div>
-                        <div class="read-more mt-2 text-right"><a href="/about">Continue Reading</a></div>
                     </div>
                 </div>
-
             </div>
         </div>
 
         <!-- SIDE-BAR CONTAINER  -->
-        <div class="sidebar-container col d-none d-md-block">
+        <div class="sidebar-container col d-none d-lg-block">
             <!-- MACY'S BIO CONTAINER  -->
             <div class="bio p-3">
                 <div class="bio-image"></div>
@@ -137,7 +142,6 @@
 
                 </div>
             </div>
-
         </div>
     </div>
 </div>
