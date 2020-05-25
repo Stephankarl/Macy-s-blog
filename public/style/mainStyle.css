@@ -94,8 +94,12 @@ a:hover
     max-width: 420px;
     padding: 30px 50px 15px 80px;
     position: absolute;
-    left: 250px;
+    left: 240px;
     top: 20px;
+}
+
+.new-post-content-sm {
+    background-color: white;
 }
 
 .latest-post {
@@ -110,13 +114,19 @@ a:hover
     overflow: hidden;
 }
 
-.new-post-content a {
+.new-post-text-sm {
+    line-height: 1.6;
+    max-height: 90px;
+    overflow: hidden;
+}
+
+.new-post-content a, .new-post-content-sm a {
     text-decoration: none;
     color: black;
     transition: all 0.2s ease-in-out;
 }
 
-.new-post-content a:hover {
+.new-post-content a:hover, .new-post-content-sm a:hover {
     color: grey;
 }
 
@@ -131,7 +141,8 @@ a:hover
     transition: all 0.2s ease-in-out;
 }
 
-.post-container:hover {
+.post-container:hover,
+.follow-container:hover {
     transform: translate3d(0, -5px, 0);
     box-shadow: 0 2rem 5rem 0 rgb(0, 0, 0, 0.1);
     cursor: pointer;
@@ -159,12 +170,16 @@ a:hover
     margin: 0;
 }
 
-.pink {
-    background-color: #E9C5A6;
+.follow-container {
+    width: 220px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.2s ease-in-out;
 }
 
-.follow-container {
-  width: 220px;
+.pink {
+    background-color: #E9C5A6;
 }
 
 .bio {

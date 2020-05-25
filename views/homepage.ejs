@@ -7,13 +7,21 @@
             <!-- MOST RECENT POST CONTAINER  -->
             <div class="row justify-content-center">
                 <div class="most-recent-post-container d-flex">
-                    <div class="new-post-image m-5" style="background-image: url(<%= posts[0].image %>);"></div>
+                    <div class="new-post-image my-5 mx-auto ml-md-5" style="background-image: url(<%= posts[0].image %>);"></div>
                     <div class="new-post-content d-none d-md-block">
                         <div class="latest-post p-2 mb-3 text-center">LATEST POST</div>
                         <div class="new-post-title mb-4"><h3><%= posts[0].title %></h3></div>
                         <div class="new-post-text mb-3"><%= posts[0].content %></div>
                         <div class="read-more mt-2 text-right"><a href="/posts/<%= posts[0].category %>/<%= posts[0]._id %>">Continue Reading</a></div>
                     </div>
+                </div>
+                <div class="new-post-content-sm d-md-none">
+                    <div class="row justify-content-end">
+                        <div class="latest-post col-4 pink p-2 mb-3 mr-5 text-center">LATEST POST</div>
+                    </div>
+                    <div class="new-post-title mb-4"><h3 class="text-center p-3"><%= posts[0].title %></h3></div>
+                    <div class="new-post-text-sm p-3 mb-3"><%= posts[0].content %></div>
+                    <div class="read-more my-2 mr-4 text-right"><a href="/posts/<%= posts[0].category %>/<%= posts[0]._id %>">Continue Reading</a></div>
                 </div>
             </div>
             
@@ -50,7 +58,7 @@
                 </div>
 
                 <div class="row justify-content-around">
-                    <a href="">
+                    <a href="http://www.subscribepage.com/macykarlblog">
                         <div class="follow-container mb-3">
                             <img src="/public/uploads/fixed/Subscribe.jpg" alt="Subscribe Image" class="img-thumbnail">
                         </div>
