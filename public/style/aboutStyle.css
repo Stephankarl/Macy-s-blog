@@ -1,0 +1,28 @@
+.about-container {
+    position: relative;
+}
+
+.about-content {
+    background-color: rgba(255, 255, 255);
+    z-index: 1;
+}
+
+.about-image {
+    min-height: 400px;
+    max-width: 300px;
+    background-image: url(/public/uploads/fixed/meetMacy.jpg);
+    background-position: top;
+    background-size: cover;
+    position: absolute;
+    right: 20px;
+}
+
+.about-image-sm {
+    background-image: url(/public/uploads/fixed/meetMacy.jpg);
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    max-width: 400px;
+    min-height: 600px;
+}
+

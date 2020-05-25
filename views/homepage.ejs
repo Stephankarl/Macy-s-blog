@@ -11,21 +11,21 @@
                     <div class="latest-post p-2 mb-3 text-center">LATEST POST</div>
                     <div class="new-post-title mb-4"><h3><%= posts[0].title %></h3></div>
                     <div class="new-post-text mb-3"><%= posts[0].content %></div>
-                    <div class="read-more mt-2 text-right"><a href="">Continue Reading</a></div>
+                    <div class="read-more mt-2 text-right"><a href="/posts/<%= posts[0].category %>/<%= posts[0]._id %>">Continue Reading</a></div>
                 </div>
             </div>
             <!-- LATEST 9 POSTS  -->
-            <div class="recent-posts mt-4">
-                <div class="row justify-content-center">
+            <div class="recent-posts">
+                <div class="row justify-content-center my-4">
                     <div class="col-8 text-center pink">
                         <h5 class="p-2">RECENTLY</h5>
                     </div>
                 </div>
 
-                <div class="row justify-content-around mb-4">
+                <div class="row justify-content-around">
                     <% for(let i = 1; i < posts.length; i++) { %>
                         <a href="/posts/<%= posts[i].category %>/<%= posts[i]._id %>">
-                            <div class="post-container mt-4 pt-2">
+                            <div class="post-container mb-3 pt-2">
                                 <div class="post-image mt-3" style="background-image: url(<%= posts[i].image %>);"></div>
                                 <div class="post-category text-center"><%= posts[i].category.toUpperCase() %></div>
                                 <div class="post-discription">
@@ -40,61 +40,64 @@
             <!-- FOLLOWING ALONG CONTAINER -->
             <div class="following-along-container">
 
-                <div class="row justify-content-center mb-4">
+                <div class="row justify-content-center mb-3 mt-1">
                     <div class="col-8 text-center pink">
                         <h5 class="p-2">Following Along</h5>
                     </div>
                 </div>
 
-                <div class="row justify-content-around mb-4">
+                <div class="row justify-content-around">
                     <a href="">
-                        <div class="follow-container pink d-flex align-items-center">
-                            <h5 class="mx-auto">Subscribe</h5>
+                        <div class="follow-container mb-3">
+                            <img src="/public/uploads/fixed/Subscribe.jpg" alt="Subscribe Image" class="img-thumbnail">
                         </div>
                     </a>
                     <a href="https://www.liketoknow.it/macykarl">
-                        <div class="follow-container pink d-flex align-items-center">
-                            <h5 class="mx-auto">Like to Know It</h5>
+                        <div class="follow-container mb-3">
+                            <img src="/public/uploads/fixed/LIKEtoKNOW.jpg" alt="Like To Know Image" class="img-thumbnail">
                         </div>
                     </a>
                     <a href="https://www.instagram.com/postcardstominnesota/">
-                        <div class="follow-container pink d-flex align-items-center">
-                            <h5 class="mx-auto">Instagram</h5>
+                        <div class="follow-container mb-3">
+                            <img src="/public/uploads/fixed/Instagram.jpg" alt="Instagram Image" class="img-thumbnail">
                         </div>
                     </a>
                 </div>
 
-                <div class="row justify-content-center mb-4">
+                <div class="row justify-content-center mb-3 mt-1">
                     <div class="col-8 text-center pink">
                         <h5 class="p-2">Want More?</h5>
                     </div>
                 </div>
 
-                <div class="row justify-content-around mb-4">
+                <div class="row justify-content-around">
                     <a href="/posts/lifestyle">
-                        <div class="follow-container pink d-flex align-items-center">
-                            <h5 class="mx-auto">LifeStyle</h5>
+                        <div class="follow-container mb-3">
+                            <img src="/public/uploads/fixed/Lifestyle.jpg" alt="Lifestyle Image" class="img-thumbnail">
                         </div>
                     </a>
                     <a href="/posts/style">
-                        <div class="follow-container pink d-flex align-items-center">
-                            <h5 class="mx-auto">Style</h5>
+                        <div class="follow-container mb-3">
+                            <img src="/public/uploads/fixed/Style.jpg" alt="Style Image" class="img-thumbnail">
                         </div>
                     </a>
                     <a href="/posts/travel">
-                        <div class="follow-container pink d-flex align-items-center">
-                            <h5 class="mx-auto">Travel</h5>
+                        <div class="follow-container mb-3">
+                            <img src="/public/uploads/fixed/Travel.jpg" alt="Travel Image" class="img-thumbnail">
                         </div>
                     </a>
                 </div>
-
-                <div class="most-recent-post-container mb-4">
-                    <div class="new-post-image m-5" style="background-image: url(<%= posts[0].image %>);"></div>
+                <!-- ABOUT MACY INFO IN MAIN CONTAINER  -->
+                <div class="most-recent-post-container mt-2 mb-4">
+                    <div class="new-post-image m-5" style="background-image: url(../../../public/uploads/fixed/meetMacy.jpg); background-position: top;"></div>
                     <div class="new-post-content">
-                        <div class="latest-post p-2 mb-3 text-center">LATEST POST</div>
-                        <div class="new-post-title mb-4"><h3><%= posts[0].title %></h3></div>
-                        <div class="new-post-text mb-3"><%= posts[0].content %></div>
-                        <div class="read-more mt-2 text-right"><a href="">Continue Reading</a></div>
+                        <div class="latest-post p-2 mb-3 text-center">About Me...</div>
+                        <div class="new-post-title mb-4"><h3>Hi, I’m Macy Karl! Want to read more about me?</h3></div>
+                        <div class="new-post-text mb-3">
+                            <p>I am a busy, spontaneous and high-spirited enneagram type 7 person who piggy backs off of type 8 challenger. I am obsessed with sharing my tips and tricks from around the world in all areas of life!</p>
+                            <p>I’m a small town Minnesota gal who uprooted her life to Hong Kong after meeting her South African fiancé one week prior. Currently living in the heart of one of the biggest cities in the world and I wouldn’t have changed a thing along the way. You can find me snuggled up in our 600sqft apartment nose deep behind my computer screen sharing my adventures and lifestyle hacks. I’m glad you’re here.</p>
+                        </div>
+                        <div class="read-more mt-2 text-right"><a href="/about">Continue Reading</a></div>
                     </div>
                 </div>
 

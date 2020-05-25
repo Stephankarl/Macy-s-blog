@@ -19,9 +19,11 @@ app.use(express.json());
 
 //Connecting files for Routes
 const postsRoutes = require('./routes/posts');
+const indexRoutes = require('./routes/indexRoutes');
 
 //Connecting Routes
 app.use('/posts', postsRoutes);
+app.use('/', indexRoutes);
 
 app.get('/', (req, res) => {
     Posts.find().sort({ _id:-1 }).limit(10).exec((err, posts) => {

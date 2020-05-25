@@ -5,6 +5,8 @@ const PostSchema = new mongoose.Schema({
     category: String,
     content: String,
     image: String,
+    continents: String,
+    country: String,
     date: Date
 });
 
